@@ -42,10 +42,6 @@ myApp.Controller = Mn.Object.extend({
 				var sessionListView = new  myApp.View.SessionsView({collection:sessionList})
 				myApp.App.root.showChildView('session',sessionListView);
 			}
-			// hide users view
-			// logic to get user from collection
-			// find his sessions
-			// display them in view
 		}
 
 	});

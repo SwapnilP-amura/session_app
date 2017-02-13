@@ -3,20 +3,6 @@ myApp = myApp || {}
 //initialize app
 myApp.App = new App();
 
-// not working ,used onBeforeStart()
-// myApp.App.on('beofre:start',function(){
-//   console.log('before:start of APP');
-//   myApp.App.setRootLayout();
-// });
-// can move this code start callback in app.js
-// myApp.App.on('start', function () {
-//   var controller = new myApp.Controller();
-//   controller.router = new myApp.Router({
-//     controller: controller
-//   });
-//   controller.start();
-//   Backbone.history.start();
-// });
 
 // dummy data here
 var user1 = new myApp.Model.User({first_name:'swapnil',last_name:'pardeshi'})

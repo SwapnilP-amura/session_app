@@ -2,14 +2,11 @@ var myApp = myApp || {}
 
 myApp.View.UsersView = Mn.CompositeView.extend({
   childView: myApp.View.UserView,
-  // Templates dont work with collection view
-  // use composite view for that
   template:_.template($('#template-users').html()),
   childViewContainer: 'ul#users',
   
   initialize:function(){
     console.log('initialize : user collection view');
-    // binds chnanges in collection on UI
     this.listenTo(this.collection,'change',this.render);
   },
   
@@ -35,9 +32,4 @@ myApp.View.UsersView = Mn.CompositeView.extend({
       myApp.userCollection.add(new_user);
     }
   }
-  
-  // when render is called on collection view
-  // it initializes childView for each model present in collection
-  // i.e passes model to view
-  // calls render on that childView
 })
